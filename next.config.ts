@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.imgur.com', // Imgur image host
+        port: '', // No port needed
+        pathname: '/**', // Allow all paths
+      },
+    ],
+  },
 };
 
 export default nextConfig;
